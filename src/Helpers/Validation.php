@@ -28,7 +28,7 @@ class Validation
     public function isIdCard(string $idCard): bool
     {
         $length = strlen($idCard);
-        if($length == 18){
+        if( $length == 18 ){
             return preg_match("/^[1-9]\d{5}(18|19|20|21|22|23)\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/", $idCard) ? true : false;
         }elseif ($length == 15){
             return preg_match("/^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}[0-9Xx]$/", $idCard) ? true : false;
